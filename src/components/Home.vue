@@ -38,20 +38,9 @@
 
 <script>
   export default {
-    data () {
-      return {
-        meetups: [
-          {
-            id: '1',
-            title: 'Laravel Meetup',
-            imageUrl: 'https://cdn-images-1.medium.com/max/1201/1*OGCE-B4onkKZyAzf1Ge0Ew.png'
-          },
-          {
-            id: '2',
-            title: 'Vue Meetup',
-            imageUrl: 'https://cdn-images-1.medium.com/max/1280/1*IPTRjl2GyBeNrBnbvB714A.jpeg'
-          }
-        ]
+    computed: {
+      meetups () {
+        return this.$store.getters.featuredMeetups
       }
     },
     methods: {
