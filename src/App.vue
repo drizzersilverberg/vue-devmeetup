@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-toolbar dark class="purple darken-1">
+    <v-toolbar dark class="red darken-1">
       <v-toolbar-side-icon
         @click.native.stop="sideNav = !sideNav"
         class="hidden-sm-and-up"
