@@ -4,13 +4,11 @@
       <v-flex xs12 sm6 class="text-xs-center text-sm-right">
         <v-btn class="red white--text"
           large
-          router
           to="/meetups">Explore Meetups</v-btn>
       </v-flex>
       <v-flex xs12 sm6 class="text-xs-center text-sm-left">
         <v-btn class="red white--text"
           large
-          router
           to="/meetups/new">Organize Meetup</v-btn>
       </v-flex>
     </v-layout>
