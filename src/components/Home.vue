@@ -14,11 +14,12 @@
     </v-layout>
     <v-layout row wrap class="mt-2">
       <v-flex xs12>
-        <v-carousel>
+        <v-carousel style="cursor: pointer;">
           <v-carousel-item
             v-for="meetup in meetups"
             :src="meetup.imageUrl"
             :key="meetup.id"
+            @click="onLoadMeetup(meetup.id)"
           >
             <div class="title">
               {{ meetup.title }}
@@ -51,6 +52,11 @@
             imageUrl: 'https://cdn-images-1.medium.com/max/1280/1*IPTRjl2GyBeNrBnbvB714A.jpeg'
           }
         ]
+      }
+    },
+    methods: {
+      onLoadMeetup (id) {
+        this.$router.push('/meetups/' + id)
       }
     }
   }

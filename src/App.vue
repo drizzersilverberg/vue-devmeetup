@@ -46,11 +46,11 @@ export default {
     return {
       sideNav: false,
       menuItems: [
-        { icon: 'supervisor_account', title: 'View Meetups', link: '/meetups'},
-        { icon: 'room', title: 'Organize Meetup', link: '/meetups/new'},
-        { icon: 'person', title: 'Profile', link: '/profile'},
-        { icon: 'face', title: 'Sign Up', link: '/signup'},
-        { icon: 'lock_open', title: 'Sign In', link: '/signin'}
+        { icon: 'supervisor_account', title: 'View Meetups', link: '/meetups' },
+        { icon: 'room', title: 'Organize Meetup', link: '/meetups/new' },
+        { icon: 'person', title: 'Profile', link: '/profile' },
+        { icon: 'face', title: 'Sign Up', link: '/signup' },
+        { icon: 'lock_open', title: 'Sign In', link: '/signin' }
       ]
     }
   },
