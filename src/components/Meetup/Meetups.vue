@@ -6,7 +6,7 @@
       row wrap>
       <v-flex xs12 sm10 md8 offset-sm1 offset-md2>
         <v-card class="info">
-          <v-container fluid>
+        <v-container fluid>
             <v-layout row>
               <v-flex xs5 sm4 md3>
                 <v-card-media
@@ -18,7 +18,7 @@
                 <v-card-title primary-title>
                   <div>
                     <h1 class="white--text mb-0">{{ meetup.title }}</h1>
-                    <div>{{ meetup.date }}</div>
+                    <div>{{ meetup.date | date }}</div>
                   </div>
                 </v-card-title>
                 <v-card-actions>
