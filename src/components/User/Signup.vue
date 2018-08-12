@@ -5,7 +5,7 @@
         <v-card>
           <v-card-text>
             <v-container>
-              <form>
+              <form @submit.prevent="onSignup">
                 <v-layout row>
                   <v-flex xs12>
                     <v-text-field
@@ -37,7 +37,7 @@
                       label="Password Confirmation"
                       id="confirmPassword"
                       v-model="confirmPassword"
-                      type="confirmPassword"
+                      type="password"
                       :rules="[comparePasswords]"
                       required
                     ></v-text-field>
@@ -45,7 +45,7 @@
                 </v-layout>
                 <v-layout row>
                   <v-flex xs12>
-                    <v-btn type="submit">Sign Up</v-btn>
+                    <v-btn class="red white--text" type="submit">Sign Up</v-btn>
                   </v-flex>
                 </v-layout>
               </form>
@@ -69,14 +69,23 @@
     computed: {
       comparePasswords () {
         return this.password !== this.confirmPassword ? 'Password do not match' : ''
+      },
+      user () {
+        return this.$store.getters.user
+      }
+    },
+    watch: {
+      user (value) {
+        if (value !== null && value !== undefined) {
+          this.$router.push('/')
+        }
       }
     },
     methods: {
-      onSignUp () {
-        console.log({
+      onSignup () {
+        this.$store.dispatch('signUserUp', {
           email: this.email,
-          password: this.password,
-          confirmPassword: this.confirmPassword
+          password: this.password
         })
       }
     }
