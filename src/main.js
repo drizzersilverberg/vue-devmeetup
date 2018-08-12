@@ -6,9 +6,7 @@ import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 import { store } from './store'
 import DateFilter from './filters/date'
-import dotenv from 'dotenv'
 
-dotenv.config()
 Vue.use(Vuetify)
 Vue.config.productionTip = false
 Vue.filter('date', DateFilter)
@@ -27,12 +25,6 @@ new Vue({
       projectId: process.env.FIREBASE_PROJECT_ID,
       storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
       messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID
-      // apiKey: "AIzaSyD0HypaPrSUiNICjiRvxFa2LpdjH326EB4",
-      // authDomain: "vue-devmeetup-1a124.firebaseapp.com",
-      // databaseURL: "https://vue-devmeetup-1a124.firebaseio.com",
-      // projectId: "vue-devmeetup-1a124",
-      // storageBucket: "vue-devmeetup-1a124.appspot.com",
-      // messagingSenderId: "1051666383758"
     })
   }
 })
